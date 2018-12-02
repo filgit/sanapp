@@ -1,6 +1,14 @@
 import React, { Component } from "react";
 import * as math from "mathjs";
 import "./circle.css";
+
+function collect(monitor) {
+  return {
+    highlighted: monitor.canDrop(),
+    hovered: monitor.isOver()
+  };
+}
+
 export class CircleSeg extends Component {
   state = {
     x: this.props.x, // Offset x

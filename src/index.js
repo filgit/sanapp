@@ -5,6 +5,8 @@ import "./components/circle.css";
 import * as serviceWorker from "./serviceWorker";
 import Puzzle from "./components/Puzzle";
 import Puzzlecontent from "./components/Puzzlecontent";
+import { DragDropContextProvider } from "react-dnd";
+import HTML5Backend from "react-dnd-html5-backend";
 
 ReactDOM.render(<Puzzle />, document.getElementById("root"));
 ReactDOM.render(<Puzzlecontent />, document.getElementById("content"));
