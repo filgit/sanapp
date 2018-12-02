@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import * as math from "mathjs";
+import "./circle.css";
 export class CircleSeg extends Component {
   state = {
     x: this.props.x, // Offset x
@@ -15,7 +16,7 @@ export class CircleSeg extends Component {
     var edgePointsL = [
       [0, 0],
       [ro - ri, 0],
-      [-ro * (1 - math.cos(arc)) + ri, -ro * math.sin(arc)],
+      [+ro * math.cos(arc) - ri, -ro * math.sin(arc)],
       [-ri * (1 - math.cos(arc)), -ri * math.sin(arc)]
     ];
 
@@ -52,6 +53,7 @@ export class CircleSeg extends Component {
 
     return (
       <path
+        className="myclass"
         d={
           "M" +
           pathPoints[0][0] +
@@ -82,9 +84,6 @@ export class CircleSeg extends Component {
           " " +
           pathPoints[0][1]
         }
-        stroke="black"
-        strokeWidth="1"
-        fill="orange"
       />
     );
   }
