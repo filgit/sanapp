@@ -1,6 +1,7 @@
+
+
 import { DragSource } from "react-dnd";
 import { Puzzlecontent } from "./Puzzlecontent";
-
 const Types = {
   PICTURE: "picture"
 };

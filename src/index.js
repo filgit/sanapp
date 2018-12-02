@@ -10,7 +10,6 @@ import Puzzle from "./components/Puzzle";
 // import HTML5Backend from "react-dnd-html5-backend";
 
 ReactDOM.render(<Puzzle />, document.getElementById("root"));
-ReactDOM.render(<DragSource />, document.getElementById("content"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
